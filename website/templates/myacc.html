@@ -1,0 +1,146 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Heroic Features - Start Bootstrap Template</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="{% static 'myacc.css' %}" />
+  </head>
+  <body>
+    <!-- Responsive navbar-->
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+    <!-- Header-->
+    <header class="py-5">
+      <div class="container px-lg-5">
+        <style>
+          a {
+            color: #000; /* Default link color */
+            text-decoration: none; /* Remove underline */
+            font-family: "Poppins", sans-serif;
+          }
+
+          a:hover {
+            color: #555; /* Color when hovering over the link */
+          }
+        </style>
+        <a href="{% url 'home' %}"
+          ><i class="fa-solid fa-chevron-left"></i> <b>HOME</b></a
+        >
+        <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
+          <form method="post" enctype="multipart/form-data">
+            <style>
+              form {
+                margin: 0 auto;
+                width: 50%; /* Adjust width as needed */
+              }
+
+              button[type="submit"] {
+                background-color: #4caf50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 8px;
+              }
+
+              button[type="submit"]:hover {
+                background-color: #45a049; /* Darker green */
+              }
+
+              input[type="file"] {
+                display: block;
+                margin-bottom: 10px;
+              }
+            </style>
+            {% csrf_token %} {{ form.as_p }}
+            <br />
+            <button type="submit">Upload File</button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <style>
+      h2 {
+        font-size: 24px; /* Adjust the font size as needed */
+        color: #333; /* Adjust the color */
+        margin-bottom: 20px; /* Adjust the margin bottom */
+        font-family: "Arial", sans-serif; /* Specify the font family */
+        text-align: center;
+      }
+    </style>
+    {% if user_files %}
+    <h2>MY FILES</h2>
+
+    {% endif %}
+    <section class="pt-4">
+      <div class="container px-lg-5">
+        <!-- Page Features-->
+        <div class="row gx-lg-5">
+          {% for file in user_files %}
+
+          <div class="col-lg-6 col-xxl-4 mb-5">
+            <div class="card bg-light border-0 h-100">
+              <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                <br /><a
+                  href="{% url 'present' file_id=file.id %}"
+                  class="btn btn-primary"
+                  >Present</a
+                ><br />
+                <style>
+                  /* Style for the PDF icon */
+                  .file-icon {
+                    background-image: url("path_to_your_pdf_icon.png"); /* Replace 'path_to_your_pdf_icon.png' with the actual path to your PDF icon */
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                    width: 48px; /* Adjust according to the size of your icon */
+                    height: 48px; /* Adjust according to the size of your icon */
+                    margin-right: 8px; /* Adjust spacing between icon and button */
+                  }</style
+                ><br />
+                <i class="fa-solid fa-file-pdf"></i>
+                {{ file.file.name | slice:"13:-4"}}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+    <!-- Footer-->
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script
+      src="https://kit.fontawesome.com/b1058b3612.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

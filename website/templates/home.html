@@ -1,0 +1,63 @@
+{% extends 'base.html' %}{% load static %} {% block content %}
+
+<div class="hero"></div>
+<!-- //Modal1 -->
+<div id="availability-agileits">
+
+
+  <div class="clearfix"></div>
+</div>
+
+<!-- /about -->
+<div class="about-wthree" id="about">
+  <div class="container">
+    <div class="ab-w3l-spa">
+      <div class="col-md-12 book-form-left-w3layouts">
+        {% if request.user.is_authenticated %}
+        <a href="{% url 'myaccount' %}"><button class="btn">My Account</button>
+        </a>
+        {% else %}
+        <a href="{% url 'signin' %}"><button class="btn">My Account</button>
+        </a>
+        {% endif %}
+      </div>
+      <h3 class="title-w3-agileits title-black-wthree">
+        About Our Air - Swipe
+      </h3>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+<!-- //about -->
+<!--sevices-->
+
+<div class="advantages">
+  <div class="container">
+    <div class="advantages-main">
+      <h3 class="title-w3-agileits">Our Services</h3>
+      <div class="advantage-bottom">
+        <div
+          class="col-md-6 advantage-grid left-w3ls wow bounceInLeft"
+          data-wow-delay="0.3s"
+        >
+        </div>
+        <div
+          class="col-md-6 advantage-grid right-w3ls wow zoomIn"
+          data-wow-delay="0.3s"
+        >
+
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="{% static '/js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static '/js/popper.min.js' %}"></script>
+<script src="{% static '/js/bootstrap.min.js' %}"></script>
+<script src="{% static '/js/jquery.sticky.js' %}"></script>
+<script src="{% static '/js/main.js' %}"></script>
+
+{% endblock %}

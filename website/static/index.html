@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="" />
+
+    <title>Air Swipe</title>
+  </head>
+  <body>
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header class="site-navbar site-navbar-target" role="banner">
+      <div class="container">
+        <div class="row align-items-center position-relative">
+          <div class="col-3">
+            <div class="site-logo">
+              <a href="{% static 'index.html' %}" class="font-weight-bold"
+                >Air - Swipe</a
+              >
+            </div>
+          </div>
+
+          <div class="col-9 text-right">
+            <span class="d-inline-block d-lg-none"
+              ><a
+                href="#"
+                class="text-primary site-menu-toggle js-menu-toggle py-5"
+                ><span class="icon-menu h3 text-white"></span></a
+            ></span>
+
+            <nav
+              class="site-navigation text-right ml-auto d-none d-lg-block"
+              role="navigation"
+            >
+              <ul class="site-menu main-menu js-clone-nav ml-auto">
+                <li class="active"><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">About</a></li>
+                <li><a href="#" class="nav-link">Logout</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+                <!-- <li><button href="#" class="button">Book Now</button></li>              -->
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="hero"></div>
+    <!-- //Modal1 -->
+    <div id="availability-agileits">
+      <div class="col-md-12 book-form-left-w3layouts">
+        <a href="admin/reservation.html"><h2>My Account</h2></a>
+      </div>
+
+      <div class="clearfix"></div>
+    </div>
+
+    <!-- /about -->
+    <div class="about-wthree" id="about">
+      <div class="container">
+        <div class="ab-w3l-spa">
+          <h3 class="title-w3-agileits title-black-wthree">
+            About Our Air - Swipe
+          </h3>
+          <p class="about-para-w3ls">
+            A place for you to tell a story and let your users know a little
+            more about your products and services.
+          </p>
+          <img
+            src="{{ url_for('static', filename='assets/images/s2.jpeg')}}"
+            class="img-responsive"
+            alt="Hair Salon"
+          />
+          <!-- <img src="images/s2.jpeg" class="img-responsive" alt="Hair Salon"> -->
+
+          <div class="w3l-slider-img">
+            <img
+              src="{{ url_for('static', filename='assets/images/a1.jpg')}}"
+              class="img-responsive"
+              alt="Hair Salon"
+            />
+          </div>
+          <div class="w3ls-info-about">
+            <h4>You'll love all the amenities we offer!</h4>
+            <p>Lorem ipsum dolor sit amet, ut magna aliqua.</p>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <!-- //about -->
+    <!--sevices-->
+
+    <div class="advantages">
+      <div class="container">
+        <div class="advantages-main">
+          <h3 class="title-w3-agileits">Our Services</h3>
+          <div class="advantage-bottom">
+            <div
+              class="col-md-6 advantage-grid left-w3ls wow bounceInLeft"
+              data-wow-delay="0.3s"
+            >
+              <div class="advantage-block">
+                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                <h4>Gesture-Powered Presentation Precision</h4>
+                <p>
+                  Experience precision in presentations like never before with
+                  our gesture-powered controls.
+                </p>
+                <p>
+                  <i class="fa fa-check" aria-hidden="true"></i> Effortlessly
+                  navigate and zoom through slides.
+                </p>
+                <p>
+                  <i class="fa fa-check" aria-hidden="true"></i>Full command of
+                  your presentation experience.
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-md-6 advantage-grid right-w3ls wow zoomIn"
+              data-wow-delay="0.3s"
+            >
+              <div class="advantage-block">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <h4>Secure Storage, Easy Retrieval:</h4>
+                <p>
+                  Effortlessly retrieve documents from your personalized library
+                </p>
+                <p>
+                  <i class="fa fa-check" aria-hidden="true"></i>Enjoy a very
+                  secure storage for your PDF's.
+                </p>
+                <p>
+                  <i class="fa fa-check" aria-hidden="true"></i>Ensuring easy
+                  access to your files whenever you need them.
+                </p>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
